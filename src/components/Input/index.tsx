@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTheme } from "styled-components/native";
+
 import { MaterialIcons } from "@expo/vector-icons";
 
 import { Container, StyledInput, AddButton } from "./styles";
@@ -18,7 +19,7 @@ export function Input() {
                 isFocused={isFocused}
             />
             <AddButton>
-                <MaterialIcons name="add-circle-outline" size={24} color="#F2F2F2" />
+                <MaterialIcons name="add-circle-outline" size={24} color={COLORS.GRAY_100} />
             </AddButton>
         </Container>
     );
