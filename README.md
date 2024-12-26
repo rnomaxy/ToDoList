@@ -1,6 +1,6 @@
 📝 Aplicativo To-Do List com React Native
 
-Desenvolvi um aplicativo To-Do List para aprimorar minhas habilidades em React Native e explorar boas práticas no desenvolvimento mobile. O projeto foi inspirado em um design criado no Figma da Rocketseat, o que me ajudou a focar mais na lógica e na implementação dos recursos.
+Desenvolvi um aplicativo To-Do List para aprimorar minhas habilidades em React Native e explorar boas práticas no desenvolvimento mobile. O projeto foi baseado em um design criado no Figma pela Rocketseat, o que me ajudou a focar mais na lógica e na implementação dos recursos.
 
 Projeto: 
 
