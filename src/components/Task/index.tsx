@@ -30,20 +30,21 @@ export function Tasks({ task, isChecked, onRemove, onCheck }: TasksProps) {
         <Container>
             <Check
                 value={isChecked}
-                onValueChange={onCheck} 
+                onValueChange={onCheck}
                 color={isChecked ? theme.COLORS.PURPLE : theme.COLORS.BLUE}
             />
 
-            <Content style={{
-                textDecorationLine: isChecked ? 'line-through' : "none",
-                color: isChecked ? theme.COLORS.GRAY_300 : theme.COLORS.GRAY_100,
-            }}>
-                {task}
-            </Content>
+                <Content style={{
+                    textDecorationLine: isChecked ? 'line-through' : "none",
+                    color: isChecked ? theme.COLORS.GRAY_300 : theme.COLORS.GRAY_100,
+                }}>
+                    {task}
+                </Content>
 
             <TouchableOpacity style={{ marginRight: 12 }} onPress={handleTaskRemove}>
                 <Trash size={20} color={theme.COLORS.GRAY_300} />
             </TouchableOpacity>
+
         </Container>
     );
 }

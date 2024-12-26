@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTheme } from "styled-components/native";
-import { FlatList } from 'react-native';
+
 import 'react-native-get-random-values';
 import { v4 as uuidv4 } from 'uuid';
 import { MaterialIcons } from "@expo/vector-icons";
@@ -11,6 +11,7 @@ import { Input } from "@components/Input";
 import { Status } from "@components/Status";
 import { Tasks } from "@components/Task";
 import { ListEmpty } from '@components/ListEmpty';
+import { FlatList } from 'react-native';
 
 export function Home() {
     const { COLORS } = useTheme();
@@ -37,8 +38,8 @@ export function Home() {
         );
     }
 
-    const createdTasks = tasks.filter(task => !task.isChecked);  
-    const completedTasks = tasks.filter(task => task.isChecked);
+    const createdTasks = tasks.length;  
+    const completedTasks = tasks.filter(task => task.isChecked).length;
 
     return (
         <Container>
@@ -55,8 +56,8 @@ export function Home() {
             </InputAndButton>
 
             <Status
-                createdCount={createdTasks.length}
-                completedCount={completedTasks.length} />
+                createdCount={createdTasks}
+                completedCount={completedTasks} />
 
             <FlatList
                 showsVerticalScrollIndicator={false}
