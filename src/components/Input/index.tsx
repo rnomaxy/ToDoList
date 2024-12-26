@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { useTheme } from "styled-components/native";
 
-import { MaterialIcons } from "@expo/vector-icons";
+import { Container, StyledInput } from "./styles";
 
-import { Container, StyledInput, AddButton } from "./styles";
+type InputProps = {
+    value: string;
+    onChangeText: (text: string) => void;
+};
 
-export function Input() {
+export function Input({ value, onChangeText }: InputProps) {
     const { COLORS } = useTheme();
     const [isFocused, setIsFocused] = useState(false);
 
@@ -17,10 +20,9 @@ export function Input() {
                 onFocus={() => setIsFocused(true)}
                 onBlur={() => setIsFocused(false)}
                 isFocused={isFocused}
+                value={value} 
+                onChangeText={onChangeText} 
             />
-            <AddButton>
-                <MaterialIcons name="add-circle-outline" size={24} color={COLORS.GRAY_100} />
-            </AddButton>
         </Container>
     );
 }

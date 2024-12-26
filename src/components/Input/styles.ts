@@ -6,12 +6,11 @@ type StyledInputProps    = {
 };
 
 export const Container = styled.View`
-
-flex-direction: row;
+    justify-content: center;
     align-items: center;
+    flex-direction: row;
     gap: 8px;
-    margin-top: -30px;
-    width: 100%;
+    width: 80%;
 `;
 
 export const StyledInput = styled(TextInput)<StyledInputProps>`
@@ -21,7 +20,7 @@ ${({ theme, isFocused }) => css`
   background-color: ${theme.COLORS.GRAY_500};
 
   font-family: ${theme.FONT_FAMILY.REGULAR};
-  font-size: ${theme.FONT_SIZE.LG};
+  font-size: ${theme.FONT_SIZE.LG}px;
 
   border-color: ${isFocused ? theme.COLORS.PURPLE_DARK : theme.COLORS.GRAY_700};
 `};
@@ -33,12 +32,3 @@ ${({ theme, isFocused }) => css`
     margin-left: 15px;
 `;
 
-export const AddButton = styled.TouchableOpacity`
-    background-color: ${({ theme }) => theme.COLORS.BLUE_DARK};
-    height: 53px;
-    width: 53px;
-    border-radius: 6px;
-    align-items: center;
-    justify-content: center;
-    margin-right: 15px;
-`;

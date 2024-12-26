@@ -9,7 +9,10 @@ border-color: ${theme.COLORS.GRAY_400};
 `};
 
 width: "100%";
-margin: 10px;
+min-height: 56px;
+margin: 5px;
+margin-right: 15px;
+margin-left: 15px;
 
 border-radius: 5px;
 border-width: 1px;
@@ -29,7 +32,7 @@ margin: 10px;
 `;
 
 export const Check = styled(Checkbox)`
-  margin-left: 10px;
+  margin-left: 12px;
   margin-right: 5px;
   border-radius: 15px;
   border-color: ${({ theme }) => theme.COLORS.BLUE};

@@ -1,16 +1,17 @@
 import styled, { css } from "styled-components/native";
 import { TitleProps } from "@components/Header/styles";
+
 export const Container = styled.View`
 margin-top: 16px;
-margin-horizontal: 20px;
+margin-right: 15px;
+margin-left: 10px;
 padding: 5px;
-padding-bottom: 8px;
+padding-bottom: 10px;
 flex-direction: row;
 justify-content: space-between;
 align-items: center;
-border-bottom-width: 0.5px;
-border-bottom-color: ${({ theme }) => theme.COLORS.GRAY_300}80;
 `;
+
 export const TitleContainer = styled.View`
 flex-direction: row;
 align-items: center;
