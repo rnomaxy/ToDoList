@@ -14,8 +14,6 @@ export const InputAndButton = styled.View`
     `;
 
 export const AddButton = styled.TouchableOpacity`
-
-    background-color: ${({ theme }) => theme.COLORS.BLUE_DARK};
     height: 53px;
     width: 53px;
     border-radius: 6px;

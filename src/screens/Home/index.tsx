@@ -15,6 +15,7 @@ import { FlatList } from 'react-native';
 
 export function Home() {
     const { COLORS } = useTheme();
+    const [isButtonPressed, setIsButtonPressed] = useState(false);
     const [tasks, setTasks] = useState<{ id: string, text: string, isChecked: boolean }[]>([]);
     const [taskText, setTaskText] = useState('');
 
@@ -38,7 +39,7 @@ export function Home() {
         );
     }
 
-    const createdTasks = tasks.length;  
+    const createdTasks = tasks.length;
     const completedTasks = tasks.filter(task => task.isChecked).length;
 
     return (
@@ -50,7 +51,16 @@ export function Home() {
                     value={taskText}
                     onChangeText={setTaskText}
                 />
-                <AddButton onPress={handleTaskAdd}>
+                <AddButton
+                    onPress={handleTaskAdd}
+                    onPressIn={() => setIsButtonPressed(true)}
+                    onPressOut={() => setIsButtonPressed(false)}
+                    style={{
+                        backgroundColor: isButtonPressed
+                            ? COLORS.BLUE
+                            : COLORS.BLUE_DARK,
+                    }}
+                >
                     <MaterialIcons name="add-circle-outline" size={24} color={COLORS.GRAY_100} />
                 </AddButton>
             </InputAndButton>

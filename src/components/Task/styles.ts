@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components/native";
+
 import Checkbox from "expo-checkbox";
 
 export const Container = styled.View`
@@ -40,5 +41,3 @@ export const Check = styled(Checkbox)`
   width: 20px;
   height: 20px;
 `;
-
-    
